@@ -1928,7 +1928,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .spotify-embed::before {
-  content: "Spotify player goes here";
+  content: "";
   color: var(--light-gray);
   font-size: 14px;
   position: absolute;
