@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pixels & logic by priya</title>
+
+  <!--- favicon-->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+
+
+
+  <!--- css link-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+</head>
+
+<body>
+
+  <!--- #MAIN-->
+
+  <main>
+    <!-- #SIDEBAR-->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Priyadharshini Franklin" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Priyadharshini Franklin">Priyadharshini Franklin</h1>
+
+          <p class="title">Web developer | UI/UX Designer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:priyalovestoyap@gmail.com" class="contact-link">priyalovestoyap@gmail.com
+              </a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+918220136610" class="contact-link">+91 82201 36610</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2005-03-04">March 04, 2005</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Chennai, Tamil Nadu</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/priyaloves7" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/priyadharshinif/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/priyadh7._/" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+
+      </div>
+
+    </aside>
+
+    <!-- #main-content-->
+
+    <div class="main-content">
+      <!--- #NAVBAR-->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!--- #ABOUT-->
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hey! I’m Priyadharshini. I work as a Frontend Developer and UI/UX Designer, and I honestly love what I do. I
+            spend most of my time designing clean interfaces, building websites and figuring out how to make things feel
+            simple and smooth. I’m that person who gets excited over good color palettes, neat layouts and a strong cup
+            of coffee.
+          </p>
+
+          <p>
+            I like taking ideas and turning them into something people actually enjoy using. I sketch, design, prototype
+            and then build the whole thing with a lot of patience and a little chaos. My style is pretty minimal and
+            clean, and I always try to make my work feel easy, friendly and comfortable to use. If something I create
+            makes someone smile or feel less confused, that’s a win for me.
+          </p>
+        </section>
+
+        <!-- - service-->
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">UI/UX Design</h4>
+
+                <p class="service-item-text">
+                  I design user-friendly, clean and aesthetic interfaces that feel good to use.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+
+                <p class="service-item-text">
+                  I build responsive and smooth websites that look good on every screen.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Prototyping</h4>
+
+                <p class="service-item-text">
+                  I create simple, clickable prototypes that help ideas come to life.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-journal.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Creative Writing & Journaling</h4>
+
+                <p class="service-item-text">
+                  I love journaling and writing little things that make my days feel softer.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!-- Tech & Tools -->
+        <section class="tech-tools">
+
+          <h3 class="h3 service-title">Tech & Tools</h3>
+
+          <ul class="tech-list">
+
+            <li class="tech-item">
+              <h4 class="h4 tech-title">Tech I Use</h4>
+              <p class="tech-text">
+                HTML, CSS, JavaScript, Node.js, Figma, Git/GitHub, VS Code, Notion
+              </p>
+            </li>
+
+            <li class="tech-item">
+              <h4 class="h4 tech-title">Tools That Keep Me Sane</h4>
+              <p class="tech-text">
+                Figma, Notion, Spotify, Canva, Chrome DevTools, My rotating VS Code themes
+              </p>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!-- Spotify Section -->
+        <section class="spotify-section">
+
+          <h3 class="h3 service-title">Music Corner</h3>
+
+          <p class="spotify-intro">
+            I work better with music, so here’s what I’m listening to.
+            Feel free to check it out or even send me a song to try.
+          </p>
+
+          <!-- Spotify Embed Goes Here -->
+          <div class="spotify-embed">
+            <iframe data-testid="embed-iframe" style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/3Xm98uiIco0YkzBxAGs3go?utm_source=generator" width="100%"
+              height="352" frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+
+          </div>
+
+
+
+        </section>
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </section>
+
+        </div>
+
+      </article>
+
+      <!-- - #RESUME-->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">MCA – Madras University (Distance Education)</h4>
+              <span>August 2025 — Present</span>
+              <p class="timeline-text">
+                I'm currently doing my MCA through distance education so I can keep learning while working.
+                It helps me dive deeper into software development and grow stronger in tech.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">B.Sc. Computer Science – SDNB Vaishnav College</h4>
+              <span>2022 — April 2025</span>
+              <p class="timeline-text">
+                This is where I built my foundation in programming, UI/UX and web development. I also worked
+                on real college projects, which helped me understand my direction as a developer.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Higher Secondary – Computer Science Stream</h4>
+              <span>2020 — 2022</span>
+              <p class="timeline-text">
+                I picked CS in school because I loved anything related to tech and creativity. This is where
+                I first learned the basics of programming and started exploring design.
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Junior Developer — Vkan-V Solutions</h4>
+              <span>July 2025 — Present</span>
+              <p class="timeline-text">
+                I work as a Junior Developer where I focus on frontend development and UI/UX. I design clean interfaces
+                and build responsive, smooth user experiences. I also collaborate on real projects and learn something
+                new every day.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full Stack Web Development Intern — Shiash Solutions</h4>
+              <span>June 2024 — August 2024</span>
+              <p class="timeline-text">
+                I worked on full stack development using Java. My role involved fixing data-related issues, improving
+                workflows
+                and understanding how backend and frontend connect in real applications.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full Stack Web Development Intern — HuntExams Academy</h4>
+              <span>January 2024 — February 2024</span>
+              <p class="timeline-text">
+                I explored both frontend and backend development. I built a Student Management System and worked on
+                managing
+                structured data efficiently. It helped me understand full stack logic and complete system workflows.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Class Representative — SDNB Vaishnav College</h4>
+              <span>2022 — 2025</span>
+              <p class="timeline-text">
+                Being the class representative helped me build strong communication, leadership and teamwork skills.
+                I handled responsibilities, coordinated tasks and supported my classmates.
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">UI/UX Design</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">React</h5>
+                <data value="40">40%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">HTML & CSS</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">JavaScript</h5>
+                <data value="75">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Node.js</h5>
+                <data value="65">65%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Express</h5>
+                <data value="60">60%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Git & GitHub</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Communication</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Teamwork</h5>
+                <data value="95">95%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 95%;"></div>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+      </article>
+
+      <!-- - #PORTFOLIO-->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Mobile Design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Mobile Design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/aagaara.png" alt="aagaara" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Aagaara</h3>
+
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="mobile design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/stoic.png" alt="stoic" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Stoic — Wellness App</h3>
+
+                <p class="project-category">Mobile design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/dashboard.png" alt="Dashboard" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Dashboard</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!-- - #BLOG-->
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/dev-blog.jpg" alt="My first month as a junior developer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Development</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01-01">Coming soon</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">My First Month as a Junior Developer</h3>
+
+                  <p class="blog-text">
+                    A little recap of what I learned, experienced, and felt during my very first month in the industry.
+                    Full post coming soon ♡
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/ui-blog.jpg" alt="UI UX tips I wish I knew earlier" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">UI/UX</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01-01">Coming soon</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI/UX Tips I Wish I Knew Earlier</h3>
+
+                  <p class="blog-text">
+                    Small design lessons that made my screens cleaner, softer and easier to use.
+                    Full post coming soon ♡
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/prototype-blog.jpg" alt="My design and coding workflow" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Workflow</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-01-01">Coming soon</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">My Design & Coding Workflow</h3>
+
+                  <p class="blog-text">
+                    How I go from idea → sketch → design → prototype → clean frontend build.
+                    Full post coming soon ♡
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+
+    </div>
+  </main>
+
+  <!--- custom js link -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
