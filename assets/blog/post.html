@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Post</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <style>
+    /* Optional tiny styling */
+    .blog-post-container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .blog-post-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .blog-post-image {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .comments-section {
+      margin-top: 40px;
+    }
+
+    .comment-item {
+      background: #f3f3f3;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <article class="blog-post-container">
+
+    <h1 class="blog-post-title">Loading...</h1>
+
+    <div class="blog-post-meta">
+      <time class="blog-post-date"></time>
+      <p class="likes-count"></p>
+    </div>
+
+    <img class="blog-post-image" src="" alt="Blog image">
+
+    <p class="blog-post-content"></p>
+
+    <hr>
+
+    <!-- Comments -->
+    <section class="comments-section">
+      <h2>Comments</h2>
+
+      <div class="comments-list"></div>
+
+      <div class="comment-form">
+        <input type="text" id="username" placeholder="Your name">
+        <textarea id="commentText" placeholder="Write a comment..."></textarea>
+        <button id="submitComment">Post Comment</button>
+      </div>
+    </section>
+
+  </article>
+
+  <script type="module" src="../assets/js/single-post.js"></script>
+</body>
+</html>

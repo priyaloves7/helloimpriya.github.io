@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -159,4 +157,69 @@ navigationLinks.forEach(link => {
   });
 });
 
+// --------------------------
+// BLOG FETCHING (Firebase)
+// --------------------------
 
+// Import modules (top of file doesn't work unless file is module)
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { 
+  getFirestore, collection, query, orderBy, onSnapshot 
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyB9QD1WYW-aStDNfGeeigdeM-YcIOaUMo0",
+  authDomain: "priya-s-blog.firebaseapp.com",
+  projectId: "priya-s-blog",
+  storageBucket: "priya-s-blog.firebasestorage.app",
+  messagingSenderId: "156553954536",
+  appId: "1:156553954536:web:3c93b80f97006b7bb8755d"
+};
+
+// Init Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// BLOG LIST AUTO-FILL
+const blogList = document.querySelector(".blog-posts-list");
+
+if (blogList) {
+  const postsRef = collection(db, "posts");
+  const postsQuery = query(postsRef, orderBy("date", "desc"));
+
+  onSnapshot(postsQuery, (snapshot) => {
+    blogList.innerHTML = "";
+
+    snapshot.forEach((doc) => {
+      const post = doc.data();
+
+      const li = document.createElement("li");
+      li.classList.add("blog-post-item");
+
+      li.innerHTML = `
+        <a href="blog/post.html?slug=${post.slug}">
+          <figure class="blog-banner-box">
+            <img src="${post.imageURL}" alt="${post.title}" loading="lazy">
+          </figure>
+
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-category">Blog</p>
+              <span class="dot"></span>
+              <time>${new Date(post.date.seconds * 1000).toDateString()}</time>
+            </div>
+
+            <h3 class="h3 blog-item-title">${post.title}</h3>
+
+            <p class="blog-text">
+              ${post.content.length > 100 ? post.content.substring(0, 100) + "..." : post.content}
+            </p>
+          </div>
+        </a>
+      `;
+
+      blogList.appendChild(li);
+    });
+  });
+}
