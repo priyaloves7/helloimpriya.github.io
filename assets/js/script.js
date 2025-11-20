@@ -149,6 +149,9 @@ navigationLinks.forEach(link => {
         page.classList.remove("active");
       }
     });
+    if (targetPage === "blog") {
+      loadBlogPosts();
+    }
 
     navigationLinks.forEach(nav => nav.classList.remove("active"));
     link.classList.add("active");
@@ -163,8 +166,8 @@ navigationLinks.forEach(link => {
 
 // Import modules (top of file doesn't work unless file is module)
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { 
-  getFirestore, collection, query, orderBy, onSnapshot 
+import {
+  getFirestore, collection, query, orderBy, onSnapshot
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 // Firebase config
@@ -183,21 +186,22 @@ const db = getFirestore(app);
 
 // BLOG LIST AUTO-FILL
 const blogList = document.querySelector(".blog-posts-list");
+function loadBlogPosts() {
+  const blogList = document.querySelector(".blog-posts-list");
+  if (blogList) {
+    const postsRef = collection(db, "posts");
+    const postsQuery = query(postsRef, orderBy("date", "desc"));
 
-if (blogList) {
-  const postsRef = collection(db, "posts");
-  const postsQuery = query(postsRef, orderBy("date", "desc"));
+    onSnapshot(postsQuery, (snapshot) => {
+      blogList.innerHTML = "";
 
-  onSnapshot(postsQuery, (snapshot) => {
-    blogList.innerHTML = "";
+      snapshot.forEach((doc) => {
+        const post = doc.data();
 
-    snapshot.forEach((doc) => {
-      const post = doc.data();
+        const li = document.createElement("li");
+        li.classList.add("blog-post-item");
 
-      const li = document.createElement("li");
-      li.classList.add("blog-post-item");
-
-      li.innerHTML = `
+        li.innerHTML = `
         <a href="blog/post.html?slug=${post.slug}">
           <figure class="blog-banner-box">
             <img src="${post.imageURL}" alt="${post.title}" loading="lazy">
@@ -219,7 +223,8 @@ if (blogList) {
         </a>
       `;
 
-      blogList.appendChild(li);
+        blogList.appendChild(li);
+      });
     });
-  });
+  }
 }
