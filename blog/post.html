@@ -3,151 +3,177 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Priya — Blog Post</title>
+  <title>Blog by priya</title>
 
-  <!-- Portfolio CSS -->
+  <!--- favicon-->
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+
+
+
+  <!--- css link-->
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <style>
-    .post-wrapper {
-      padding: 20px 30px;
-      animation: fadeIn 0.4s ease;
-    }
+  <!--- google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      background: var(--bg-oxford-blue-1);
-      color: var(--text-white);
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      border: 1px solid var(--border-prussian-blue);
-      transition: 0.2s;
-    }
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 
-    .back-btn:hover {
-      background: var(--bg-oxford-blue-2);
-    }
-
-    .post-title {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: var(--text-white);
-    }
-
-    .post-date {
-      opacity: 0.7;
-      font-size: 14px;
-      margin-bottom: 20px;
-      display: block;
-    }
-
-    .post-image {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 25px;
-    }
-
-    .post-content {
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--text-white);
-      white-space: pre-line;
-    }
-
-    .comments-section {
-      margin-top: 50px;
-    }
-
-    .comments-section h2 {
-      margin-bottom: 10px;
-    }
-
-    .comment-item {
-      background: var(--bg-oxford-blue-2);
-      padding: 12px 15px;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      border: 1px solid var(--border-prussian-blue);
-    }
-
-    .comment-form {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .comment-form input,
-    .comment-form textarea {
-      background: var(--bg-oxford-blue-1);
-      border: 1px solid var(--border-prussian-blue);
-      padding: 10px;
-      border-radius: 6px;
-      color: var(--text-white);
-    }
-
-    .comment-form button {
-      padding: 10px;
-      border-radius: 6px;
-      border: none;
-      background: var(--bg-oxford-blue-2);
-      color: var(--text-white);
-      cursor: pointer;
-    }
-  </style>
 </head>
 
 <body>
 
   <main>
 
-    <!-- SIDEBAR (copied from your index.html) -->
+    <!-- #SIDEBAR-->
+
     <aside class="sidebar" data-sidebar>
+
       <div class="sidebar-info">
+
         <figure class="avatar-box">
-          <img src="/assets/images/avatar.png" alt="Priya avatar">
+          <img src="/assets/images/my-avatar.png" alt="Priyadharshini Franklin" width="80">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Priyadharshini">Priyadharshini</h1>
-          <p class="title">Frontend Developer</p>
+          <h1 class="name" title="Priyadharshini Franklin">Priyadharshini Franklin</h1>
+
+          <p class="title">Web developer | UI/UX Designer</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
         </button>
+
       </div>
 
       <div class="sidebar-info_more">
+
         <div class="separator"></div>
 
         <ul class="contacts-list">
+
           <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
             <div class="contact-info">
               <p class="contact-title">Email</p>
-              <a href="mailto:priyaloves7@gmail.com" class="contact-link">priyaloves7@gmail.com</a>
+
+              <a href="mailto:priyalovestoyap@gmail.com" class="contact-link">priyalovestoyap@gmail.com
+              </a>
             </div>
+
           </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+918220136610" class="contact-link">+91 82201 36610</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2005-03-04">March 04, 2005</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Chennai, Tamil Nadu</address>
+            </div>
+
+          </li>
+
         </ul>
 
         <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/priyaloves7" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/priyadharshinif/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/priyadh7._/" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+
       </div>
+
     </aside>
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
 
       <!-- NAVIGATION (copied from your index.html) -->
+      <!--- #NAVBAR-->
+
       <nav class="navbar">
         <ul class="navbar-list">
-          <li class="navbar-item"><a href="/" class="navbar-link">About</a></li>
-          <li class="navbar-item"><a href="/index.html#blog" class="navbar-link active">Blog</a></li>
+
+          <li class="navbar-item">
+            <a class="navbar-link" href="/index.html">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a class="navbar-link" href="/index.html#resume">Resume</a>
+          </li>
+
+          <li class="navbar-item">
+            <a class="navbar-link" href="/index.html#portfolio">Portfolio</a>
+          </li>
+
+          <li class="navbar-item">
+            <a class="navbar-link" href="/index.html#blog">Blog</a>
+          </li>
+
         </ul>
       </nav>
+
 
       <!-- BLOG POST CONTENT -->
       <article class="post-wrapper">
@@ -179,7 +205,9 @@
   </main>
 
   <script type="module" src="/assets/js/single-post.js"></script>
-
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
